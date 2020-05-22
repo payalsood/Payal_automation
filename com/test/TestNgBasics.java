@@ -36,7 +36,7 @@ public class TestNgBasics {
 	
 	@Test
 	public void googleTitleTest(){
-		System.out.println("Google Title Test");
+		System.out.println("Google Title Test One");
 	}
 	
 	@Test
