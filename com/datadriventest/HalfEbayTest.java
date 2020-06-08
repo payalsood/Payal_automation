@@ -1,5 +1,7 @@
 package com.datadriventest;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.test.utility.testUtil;
 
 public class HalfEbayTest {
 	WebDriver driver;
@@ -25,10 +29,12 @@ public class HalfEbayTest {
 	}
 	
 	@DataProvider
-	public void getTestData(){
+	public  Iterator<Object[]> getTestData(){
+		ArrayList<Object[]> list = testUtil.getDataFromExcel();
+		return list.iterator();
 		
 	}
-	@Test
+	@Test(dataProvider="getTestData")
 	public void halfEbayTest(String FirstName, String LastName, String EmailId){
 		driver.findElement(By.xpath("//*[@id='firstname']")).clear();
 		driver.findElement(By.xpath("//*[@id='firstname']")).sendKeys("Test");

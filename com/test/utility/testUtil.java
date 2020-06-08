@@ -8,7 +8,7 @@ public class testUtil {
 	
 	
 	
-	Xls_Reader reader;
+	static Xls_Reader reader;
 	public static ArrayList<Object[]> getDataFromExcel(){
 		ArrayList<Object[]> myData = new ArrayList<Object[]>();
 		try  {
@@ -17,5 +17,8 @@ public class testUtil {
 		} catch (Exception e){
 			e.printStackTrace();
 		}
+		
+		
+		
 	}
 }
