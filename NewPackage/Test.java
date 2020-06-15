@@ -8,16 +8,22 @@ static Integer j = null;
 
 	public static void main(String[] args) {
 		
-		String s1 = "Java";
+//		String s1 = "Java";
+//		
+//		String s2 = "Selenium testing is done";
 		
-		String s2 = "Selenium testing is done";
 		
 		
+	
 		
-		s2 = s2.substring(7, 12);
-		
-		System.out.println(s2);
-
+		String s1 = "ABC";
+		String s2 = "ABC";
+		StringBuffer sb1 = new StringBuffer("ABC");
+		StringBuffer sb2 = new StringBuffer("ABC");
+		System.out.println(s1==s2);
+		System.out.println(s1.equals(s2));
+		System.out.println(sb1==sb2);
+		System.out.println(sb1.equals(sb2));
 	}
 
 }

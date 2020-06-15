@@ -14,6 +14,7 @@ public class Palindrome_number {
 			sum=(sum*10)+r;
 			num=num/10;
 		}		
+	
 		if(t==sum){
 			System.out.println("number is a palindrome number");
 		}else {
@@ -27,3 +28,4 @@ public class Palindrome_number {
 	}
 
 }
+
